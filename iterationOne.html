@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SYS366 Case Study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./welcome.html">SYS366</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="./welcome.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./student.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./iterationOne.html" c>First Iteration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./iterationTwo.html" >Second Iteration</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<body>
+    <section>
+        <article class="col-md-12">
+            <h1>Stakeholder Matrix</h1>
+            <p>The following matrix shows a few of the stakeholders involved in our case study</p>
+            <embed src="./stakeholderMatrix.pdf" width="700px" height="700px" class="rounded mx-auto d-block" />
+        </article>
+        <br>
+        <article class="col-md-12">
+            <h1>Business Use Cases</h1>
+            <h4>Inventory System</h4>
+            <figure>
+                <img src="BUC1.svg" usemap="#image-map1" class="rounded mx-auto d-block">
+            </figure>
+        </article>
+        <br>
+        <article class="col-md-12" id="inventorySpecs">
+
+            <hr>
+            <div id="0">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">OrderEdibleSupplies</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the Purchasing manager to order edible cannabis supplies
+                        from supplier .</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">PurchasingManager, SupplierAgent</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Starbuds would like to increase/replenish inventory of cannabis products.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Ordered inventory of edible cannabis products.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="1">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">OrderNonEdibleSupplies</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the Purchasing Manager to order non-edible cannabis
+                        supplies from supplier .</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">PurchasingManager, SupplierAgent</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Starbuds would like to increase/replenish inventory of cannabis products.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Non-edible cannabis products are ordered.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="2">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">SendPayment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the purchasing manager to send the payment for the
+                        supplies to the supplier.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">PurchasingManager, Supplier</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Inventory has space that needs to be filled up with proper items.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Payment to the supplier is made.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="3">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">RecieveInvoice</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">The supplier sends back the invoice for the purchasing order to the company.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">PurchasingManager,Supplier</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Supplier recives the payment for the items requested.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Receipt is recived.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="4">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">ReportTransaction</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">The purchasing manager will report any financial transaction made to the book
+                        keeper who keeps track of the payments.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">PurchasingManager, BookKeeper</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Purchasing manager makes a financial transaction and wants to report it.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">BookKeeper is made aware of the transaction.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="5">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">RecordTransaction</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">BookKeeper records the transactions on a company database.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">BookKeeper</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">BookKeeper is made aware of a transaction that needs to be recorded.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">A record for the transaction is made.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="6">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">ReceiveInventorySupplies</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the stock clerk to receive inventory from the
+                        supplier.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">StoreClerk, SupplierAgent</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Supplier schedules and delivers the items</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Received inventory supplies.
+                    </dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="7">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">CheckRecivedSupplies</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the stock clerk to inspect the supplies and make sure
+                        they are not damaged or are exactly what was requested.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">StockClerk</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Stock clerk recives supplies from the supplier agent.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Goods are inspected before being added to the inventory.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="8">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">UpdateInventory</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the stock clerk to update the store inventory for the
+                        supplies recived.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">StockClerk</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Stock clerk recived supplies from a supplier agent.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Items are added to the inventory.</dd>
+                </dl>
+            </div>
+
+        </article>
+        <article class="col-md-12">
+            <h1>Business Use Cases</h1>
+            <h4>Retail System</h4>
+            <figure>
+                <img src="BUC2.svg" usemap="#image-map1" class="rounded mx-auto d-block">
+               
+            </figure>
+        </article>
+
+        <article class="col-md-12">
+            <div id="9">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">SellRecreationalProducts</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7"> This use case enables the Retail Manager to sell traditional products and
+                        cannabis edibles to customers in the recreational section</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailManager, Customer</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Customer wants to buy products in the recreational section.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Recreational products are sold to the customer</dd>
+                </dl>
+            </div>
+            <hr>
+
+            <div id="10">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">SellNonRecreationalProducts</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This user case enables the Retail Manager to sell cannabis for smoking and
+                        vaping
+                        to customers in the Pick-up section</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailManager, Customer</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Customer wants to buy non-recreational cannibus prodcuts </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5"> Sold non-recreational products in the pick-up section</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="11">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">MakeCryptoCurrencyPayment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the customer/client to make crypto currency payment for
+                        their selected product/service</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Customer, RetailEmployee</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Customer wants to buy product/service but pay for them via other means than
+                        just physical cash</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Payment is made to the retail employee by the customer.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="12">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">MakeCashPayment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the customer to make cash payment for their selected
+                        product/service</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Customer, RetailEmployee</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Customer wants to buy product/service through cash.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Cash payment made to the retail employee by the customer.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="13">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">GetProductReceipt</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the retail employee to provide a receipt to the
+                        customer.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailEmployee,Customer</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Customer makes a payment.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">A receipt is provided to the customer.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="14">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">AdvertiseProducts</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the retail employee to advertise to the potential
+                        customers who ask for information about the products and consultive services available at
+                        StarBuds</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailEmployee,PotentialCustomer</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Person is interested in the shop products but would like know more about a
+                        product before buying.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Customers learn about consultation services offered by StarBuds</dd>
+                </dl>
+            </div>
+            <hr>
+
+            <div id="15">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">PayCashDeposit</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the client to pay cash deposit to the retail employee.
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailEmployee,Client</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Client would like to book an appointment.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">cash deposit is made.</dd>
+                </dl>
+            </div>
+            <div id="16">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">GetClientNumber</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the retail employee to issue a client number to the
+                        client.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">RetailEmployee,Client</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Client has payed a cash deposit and now wants to book an appointment.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">A new client number is issed to the client.</dd>
+                </dl>
+            </div>
+
+            <div id="17">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">LoginWithClientNumber</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the client to login to the consultation booking app
+                        using their client number.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Client</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger:</dt>
+                    <dd class="col-sm-5">Client has a unique number and wants to see available times to book an
+                        appointment.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Client is logged into the system.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="18">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">BookAppointment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7"> This use case enables the client to book an appointment with the cannabis
+                        consultant through tablets available
+                        in the retail store</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Client, ServiceConsultant</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Service consultant takes booking appointment in the store</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Appointmnet is booked and added to the calendar</dd>
+                </dl>
+            </div>
+            <hr>
+
+            <div id="19">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">UpdateAppointment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the client to update already booked appointment through
+                        tablets available in the retail store.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Client, ServiceConsultant</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Client wants to meet at another time.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">The appointment time is updated.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="20">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">CancelAppointment</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the client to cancel booked reservation through tablets
+                        available in the retail store.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Client, ServiceConsultant</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Client does no longer want to schedule an appointment with the consultant.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">The appointment time is canceled.</dd>
+                </dl>
+            </div>
+            <hr>
+            <div id="21">
+                <dl class="row">
+                    <dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">MonitorHealthActivity</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7">This use case enables the client to note down their daily health activity on
+                        an
+                        online app as an anonymous user.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">Client, ServiceConsultant</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Client takes part in clinical trial and wants to give data to the consultant.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Data about the client is collected.</dd>
+                </dl>
+            </div>
+
+            <hr>
+            <div id="22">
+                <dl class="row">
+                    </dt><dt class="col-sm-2">Business Use Case Name:</dt>
+                    <dd class="col-sm-3">SellResearchData</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Short Description:</dt>
+                    <dd class="col-sm-7"> This use case enables the consultant to sell research data to interested
+                        cannabis parties for research or other means.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Actors:</dt>
+                    <dd class="col-sm-5">ServiceConsultant, InterestedBuyer</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Trigger</dt>
+                    <dd class="col-sm-5">Service consultant has a large amount of research data collected.</dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-2">Result:</dt>
+                    <dd class="col-sm-5">Sold research data</dd>
+                </dl>
+            </div>
+
+
+        </article>
+        <article class="col-md-12">
+        <h1>Work Distribution</h1>
+           <dl class="row">
+                <dt class="col-sm-2">Abdul Rehman</dt>
+                <dd class="col-sm-3">Building website, creating client applicaiton system use cases</dd>
+            </dl>
+             <dl class="row">
+                <dt class="col-sm-2">Cherrie Mae Gabriel</dt>
+                <dd class="col-sm-3">Creating inventory system use cases, overseeing the whole project</dd>
+            </dl>
+                  <dl class="row">
+                <dt class="col-sm-2">Julie Philip James</dt>
+                <dd class="col-sm-3">Creating use case specifications as requested</dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">Alanna Nguyen</dt>
+                <dd class="col-sm-3">Creating retail to customer use cases, uploading data to Iteration One.</dd>
+            </dl>
+        </article>
+        <!--
+    TEMPLATE I CREATED BELOW:
+        <div id="">
+            <dl class="row">
+                <dt class="col-sm-2">Business Use Case Name:</dt>
+                <dd class="col-sm-3"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">Short Description:</dt>
+                <dd class="col-sm-7"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">Actors:</dt>
+                <dd class="col-sm-5"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">Trigger:</dt>
+                <dd class="col-sm-5"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">Result:</dt>
+                <dd class="col-sm-5"></dd>
+            </dl>
+        </div>
+
+        TODO:
+        1- ARRAGE THE SPECS IN ORDER OF THE IMAGE
+        2- UPDATE STARUML
+        3- BITMAP THE IMAGE TO THE DIV IDS
+        4- COLLAB WITH THE TEAM AND GET THEIR INPUT
+        5- HAVE FUN!
+        -->
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
