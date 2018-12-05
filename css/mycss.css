@@ -2,27 +2,36 @@
 
 #final {
     background-color: whitesmoke;
-    border: 5px solid black;
 }
 
-.buffer { 
+/* .buffer { 
     margin-top:50px;
     margin-bottom: 50px;
+ } */
+ .buffer {
+     margin-top: 5em;
+     margin-bottom: 2em;
  }
 #mainHeading {
-    margin-top: 200px;
+    margin-top: 20%;
+}
+
+
+#sub {
+    padding-bottom: 20%;
 }
  .covervid-wrapper {
     position: absolute;
+    object-fit: contain;
     top: 15;
     left: 0;
-    width: 100%;
-    height: 90%;
+    width: 79em;
+    height: 33em;
 }
 
-#first {
+/* #first {
     margin-top: 300px;
-} 
+}  */
 
 #final {
     border: 5px;
