@@ -2,17 +2,33 @@
 
 #final {
     background-color: whitesmoke;
+    border: 5px solid black;
 }
 
 .buffer { 
     margin-top:50px;
     margin-bottom: 50px;
  }
-
- /* .covervid-wrapper {
+#mainHeading {
+    margin-top: 200px;
+}
+ .covervid-wrapper {
     position: absolute;
-    top: 0;
+    top: 15;
     left: 0;
     width: 100%;
-    height: 100%;
-} */
+    height: 90%;
+}
+
+#first {
+    margin-top: 300px;
+} 
+
+#final {
+    border: 5px;
+    border-color: black;
+}
+
+#vid {
+    opacity: 0.4;
+}
