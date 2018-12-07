@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SYS366 Case Study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./welcome.html">SYS366</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./welcome.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./student.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iterationOne.html" c>First Iteration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" c>Second Iteration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iterationThree.html" c>Third Iteration</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <article class="col-md-12">
+            <h2>Original Inventory System</h2>
+            <figure>
+                <img src="BUC1.svg" usemap="#image-map1" class="rounded mx-auto d-block">
+            </figure>
+            <h2>Problem Statement</h2>
+            <dl class="row">
+                <dt class="col-sm-3">The Problem of:</dt>
+                <dd class="col-sm-9">Keeping track of store inventory and finacial transactions when buying supplies</dd>
+                <dt class="col-sm-3">Affects:</dt>
+                <dd class="col-sm-9">PurchasingManager, Supplier, BookKeeper, SupplierAgent, StockClerk</dd>
+                <dt class="col-sm-3">The impact of which is:</dt>
+                <dd class="col-sm-9">Extra work, more time consumption, human errors, loss of transactions and/or
+                    supplies</dd>
+                <dt class="col-sm-3">A successful solution would:</dt>
+                <dd class="col-sm-9">Provide real-time transaction and product-tracking capablilites and store
+                    transaction history, show current items in the inventory</dd>
+            </dl>
+
+            <h2>System Diagram</h2>
+            <img src="./system.svg" alt="System diagram not loaded properly" height="600px" class="rounded mx-auto d-block">
+            <h2>Casual Use Case Specifications</h2>
+            <hr>
+            <h4>Scenario 1: Authenticate User</h4>
+            <h6>Precondition: User has been set up and already has an account created by the admin</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (User)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Enter Username and Password in the main page</td>
+                        <td>Verifies if username exists and password entered is correct.</td>
+                        <td>
+                            password
+                            <br>userName
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>
+                            Clicks the forgot password
+                        </td>
+                        <td>
+                            Redirects to the password reset page and asks the user to enter email address.<br> Once
+                            email address is entered, it will send an email request to reset the password
+                        </td>
+                        <td>emailAddress</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Clicks the Submit button</td>
+                        <td>
+                            Redirects to the account/dashboard page
+                        </td>
+                        <td>
+                            userName<br> password
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: User has logged in to the system
+            </h6>
+            <hr>
+
+            <h4>Scenario 2: Check Inventory</h4>
+            <h6>Preconditions: Purchasing Manager opens the application.
+            </h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (PurchasingManager)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            Successfully logs in with<br> username and password
+                        </td>
+                        <td>
+                            Displays account/dashboard page for StarBuds inventory system
+                        </td>
+                        <td>
+                            password
+                            <br>userName
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Select to view inventory page</td>
+                        <td>Display inventory of current products</td>
+                        <td>productList</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Select item to order</td>
+                        <td>
+                            Displays item name, number of item in stock, sku/code, description, price per unit
+                        </td>
+                        <td>
+                            itemName, itemInstock<br> itemCode,unitPrice<br>productDescription
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Conditions: Inventory is visible to appropriate staff.
+            </h6>
+            <hr>
+            <h4>Scenario 3: Order Supplies</h4>
+            <h6>Preconditions: The PurchasingManager is logged in and the system displays the order menu</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (Purchasing Manager)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Selects the Order page</td>
+                        <td>Displays the list of items in stock</td>
+                        <td>productList</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-center font-weight-bold">Loop</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Selects the item that need to be ordered</td>
+                        <td>Displays the item and the number of units to order</td>
+                        <td>itemName, quantity</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Selects the number of quantity</td>
+                        <td>Displays the number of quantity selected</td>
+                        <td>quantity</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Adds the items to cart</td>
+                        <td>Displays the selected items, number of quantity and total price</td>
+                        <td> itemName, quantity, totalPrice</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Selects delivery method</td>
+                        <td> Displays for pick-up or ship to address. If ship to address, adds a form to enter shipping address</td>
+                        <td>shippingAddress</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Select to Confirm</td>
+                        <td> Sends confirmation email to the actor, redirects to successful order page,redisplays the ordered items</td>
+                        <td>emailAddress, orderList</td>
+                    </tr>
+                    <tr>
+                            <td colspan="4" class="text-center font-weight-bold">End Loop</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">7</th>
+                            <td>Chooses to logout and exit</td>
+                            <td>Clears login session, redisplays the main menu</td>
+                            <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Conditions:  Items ordered and confirmation email is sent to the Stock clerk</h6>
+            <hr>
+            <h4>Scenario 4: Update Order</h4>
+            <h6>Precondition: PurchasingManager has ordered supplies that have not yet been delivered</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (PurchasingManager)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Selects the Update Order page</td>
+                        <td>Displays the item and the number of units to ordered but not yet delivered</td>
+                        <td>itemName, quantity</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-center font-weight-bold">Loop</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Selects the item whos order needs to be updated</td>
+                        <td>Asks for new product quantity</td>
+                        <td>Number of products</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Submits records to the system</td>
+                        <td>Asks for digital signature</td>
+                        <td>Digital Signature</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-center font-weight-bold">End Loop</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">4</th>
+                            <td>Chooses to logout and exit</td>
+                            <td>Clears login session, redisplays the main menu	</td>
+                            <td>N/A</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: The orders have been updated </h6>
+            <hr>
+            <h4>Scenario 5: Delete Order</h4>
+            <h6>Precondition: PurchasingManager has ordered supplies that have not yet been delivered</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (PurchasingManager)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Selects the Delete Order page</td>
+                        <td>Displays the item and the number of units to ordered but not yet delivered</td>
+                        <td>itemName, quantity</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Select item order that needs to be canceled</td>
+                        <td>Ask for user confirmation before deleting order</td>
+                        <td>itemName, quantity</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">3</th>
+                            <td>Chooses to logout and exit</td>
+                            <td>Clears login session, redisplays the main menu	</td>
+                            <td>N/A</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: The selected order has been deleted with the payment refunded</h6>
+            <hr>
+            <h4>Scenario 5: View Transactions</h4>
+            <h6>Precondition: BookKeeper is logged in and is authorized to access transaction history </h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (BookKeeper)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Selects the transcation history page</td>
+                        <td>Display items, quantity, and payment amount for each transaction</td>
+                        <td>date,itemName, quantity, payment amount, transactionType</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Select specific transaction</td>
+                        <td>Show addition information about transaction</td>
+                        <td>date,itemName, quantity, transactionType, productDescription,transactionType</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">3</th>
+                            <td>Chooses to logout and exit</td>
+                            <td>Clears login session, redisplays the main menu	</td>
+                            <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: BookKeeper is informed about all transactions that took place along with the required details</h6>
+<hr>
+            <h4>Scenario 6: Monitor Delivery</h4>
+            <h6>Precondition: The stock clerk has an online receipt containing  the list of products purchased</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (Stock Clerk)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Checks for the product delivered</td>
+                        <td>Asks for product verification code</td>
+                        <td>Product verification code</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Checks for the quantity of products delivered</td>
+                        <td>Asks for product quantity</td>
+                        <td>Number of products</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Submits records to the system</td>
+                        <td>Asks for signature</td>
+                        <td>Signature</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Wants a copy of the records submitted</td>
+                        <td>Grants print permissions</td>
+                        <td> Number of copies</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: the products delivered has been carefully monitored</h6>
+            <hr>
+            <h4>Scenario 7: Update Inventory</h4>
+            <h6>Precondition: Stock clerk has monitored the products delivered</h6>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Actor (Stock Clerk)</th>
+                        <th scope="col">System</th>
+                        <th scope="col">Data Used</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Successfully logs in with username and password</td>
+                        <td>Displays account/dashboard page for StarBuds inventory system</td>
+                        <td>Username, password</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-center font-weight-bold">Loop</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Select to view inventory page</td>
+                        <td>Displays inventory of current products</td>
+                        <td>productList</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Selects the item that needs to be updated or add new item to inventory</td>
+                        <td>Displays the item and the number of units to update</td>
+                        <td>itemName, quantity</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">4</th>
+                            <td>Selects the number of quantity</td>
+                            <td>Displays the number of quantity selected</td>
+                            <td>quantity</td>
+                        </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Select to Confirm</td>
+                        <td>Send the updated quantity and item to the system’s database</td>
+                        <td> Item List, quantity</td>
+                    </tr>
+                    <tr>
+                            <td colspan="4" class="text-center font-weight-bold">End Loop</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Chooses to logout and exit</td>
+                        <td>Clears login session, redisplays the main menu</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>Successful Post-Condition: The inventory has been successfully updated</h6>
+            <hr>
+        </article>

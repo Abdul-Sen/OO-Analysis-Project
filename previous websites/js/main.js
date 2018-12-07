@@ -1,8 +1,6 @@
 $(function() {
    console.log( "document ready!" );
    $('.covervid-video').coverVid(720, 1080);
-   $('.collapse').collapse();
-   
 });
 
 console.log("file loaded");
